@@ -12,6 +12,7 @@ class FormViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var subtitleLabel: UILabel!
     var pageNumber: Int = 0
+    @IBOutlet var progressView: UIProgressView!
     @IBOutlet var continueButton: UIButton!
     //MARK: User Fields
     var firstName: String!
@@ -22,6 +23,7 @@ class FormViewController: UIViewController, UITextFieldDelegate {
     var investmentGoals: [User.GoalType]!
     var riskTolerance: User.ToleranceLevel!
     var investmentModes: [User.InvestmentModes]!
+    var user: User? = nil
     //MARK: Page 0 Outlets
     @IBOutlet var pageOneStack: UIStackView!
     @IBOutlet var firstNameTextField: UITextField!
@@ -89,6 +91,7 @@ class FormViewController: UIViewController, UITextFieldDelegate {
         updateContinueButton()
     }
     
+    //MARK: Page 4 Logic
     @IBAction func investingModesButtonPressed(_ sender: UIButton) {
         let stack = sender.superview as! UIStackView
         stack.arrangedSubviews[0].isHidden.toggle()
@@ -162,12 +165,15 @@ class FormViewController: UIViewController, UITextFieldDelegate {
         
         
         if pageNumber == (pages.count - 1) {
-            print("end")
+            let newUser = User(firstName: firstName, lastName: lastName, age: age, email: email, workStatus: workStatus, investingGoals: investmentGoals, riskTolerance: riskTolerance, investmentModes: investmentModes)
+            user = newUser
+            performSegue(withIdentifier: "completeForm", sender: nil)
         }
         else {
             pages[pageNumber].isHidden = true
             pageNumber += 1
             configureTitles()
+            progressView.setProgress( Float(pageNumber)/Float(pages.count), animated: true)
             pages[pageNumber].isHidden = false
             continueButton.isEnabled = false
             if pageNumber == 3 {
@@ -175,6 +181,13 @@ class FormViewController: UIViewController, UITextFieldDelegate {
             }
         }
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "completeForm" else {return}
+        let destination = segue.destination as! SecondaryFormTableViewController
+        destination.user = self.user
+        destination.goals = self.user?.investingGoals
     }
     func configureTitles() {
         if pageNumber == 1 {
