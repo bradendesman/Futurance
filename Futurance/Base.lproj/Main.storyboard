@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aHd-Nj-kBn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aHd-Nj-kBn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="hv9-um-eum">
-                                <rect key="frame" x="30" y="280.5" width="354" height="335"/>
+                                <rect key="frame" x="30" y="200" width="354" height="496.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RFA-lR-vfe">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="151"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="73"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OAe-dm-q3i">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
@@ -63,47 +63,38 @@
                                                     <action selector="emailTextFieldChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="qDQ-Ie-vLB"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iNw-89-bgW">
-                                                <rect key="frame" x="0.0" y="78" width="354" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-type Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7F8-mo-tCD">
-                                                <rect key="frame" x="0.0" y="117" width="354" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xJP-tY-qso">
-                                        <rect key="frame" x="0.0" y="176" width="354" height="103"/>
+                                        <rect key="frame" x="0.0" y="98" width="354" height="103"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11i-YV-mOQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="31"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="30S-U2-AoE">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="30S-U2-AoE">
                                                         <rect key="frame" x="0.0" y="0.5" width="20" height="30"/>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avj-Jl-cn5">
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avj-Jl-cn5">
                                                         <rect key="frame" x="20" y="0.0" width="334" height="31"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Student"/>
+                                                        <buttonConfiguration key="configuration" style="plain">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Student"/>
+                                                            </attributedString>
+                                                        </buttonConfiguration>
                                                         <connections>
                                                             <action selector="workStatusButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GGw-HK-Djc"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="30S-U2-AoE" firstAttribute="width" secondItem="avj-Jl-cn5" secondAttribute="width" multiplier="0.0598802" id="h1r-7o-pmf"/>
-                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ES2-yb-Sli">
                                                 <rect key="frame" x="0.0" y="36" width="354" height="31"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aav-8Z-4ai">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aav-8Z-4ai">
                                                         <rect key="frame" x="0.0" y="0.5" width="20" height="30"/>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5B-eQ-ayR">
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5B-eQ-ayR">
                                                         <rect key="frame" x="20" y="0.0" width="334" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Working Full-Time"/>
@@ -112,14 +103,11 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="aav-8Z-4ai" firstAttribute="width" secondItem="f5B-eQ-ayR" secondAttribute="width" multiplier="0.0598802" id="XO1-dW-30w"/>
-                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zng-S7-Ot9">
                                                 <rect key="frame" x="0.0" y="72" width="354" height="31"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0vt-fe-b2I">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0vt-fe-b2I">
                                                         <rect key="frame" x="0.0" y="0.5" width="20" height="30"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Un-P9-Qmi">
@@ -131,14 +119,108 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="0vt-fe-b2I" firstAttribute="width" secondItem="3Un-P9-Qmi" secondAttribute="width" multiplier="0.0598802" id="hYD-5o-8Fq"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="06Q-SQ-W7x">
+                                        <rect key="frame" x="0.0" y="226" width="354" height="139"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMU-Fb-tsX">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="31"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="C3Z-gW-LXz">
+                                                        <rect key="frame" x="0.0" y="0.5" width="20" height="30"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDp-re-fKK">
+                                                        <rect key="frame" x="20" y="0.0" width="334" height="31"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Manage Debt"/>
+                                                        <connections>
+                                                            <action selector="investingGoalsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDR-yB-p13"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNa-Ic-fah">
+                                                <rect key="frame" x="0.0" y="36" width="354" height="31"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IH1-Ji-9oS">
+                                                        <rect key="frame" x="0.0" y="0.5" width="20" height="30"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQd-EK-IGq">
+                                                        <rect key="frame" x="20" y="0.0" width="334" height="31"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Save for Retirement"/>
+                                                        <connections>
+                                                            <action selector="investingGoalsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AP7-KY-veL"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dry-Nc-Ztw">
+                                                <rect key="frame" x="0.0" y="72" width="354" height="31"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CDi-oY-ahR">
+                                                        <rect key="frame" x="0.0" y="0.5" width="20" height="30"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIE-At-vZ5">
+                                                        <rect key="frame" x="20" y="0.0" width="334" height="31"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Save for Home"/>
+                                                        <connections>
+                                                            <action selector="investingGoalsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aEv-oH-CwM"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r8f-3t-lji">
+                                                <rect key="frame" x="0.0" y="108" width="354" height="31"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1ws-qc-bKS">
+                                                        <rect key="frame" x="0.0" y="0.5" width="20" height="30"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjr-Hz-Cjc">
+                                                        <rect key="frame" x="20" y="0.0" width="334" height="31"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Save for Car"/>
+                                                        <connections>
+                                                            <action selector="investingGoalsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="07e-lm-aFF"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Gqp-xf-5pU">
+                                        <rect key="frame" x="0.0" y="390" width="354" height="50.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lS-8F-j0c">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0B-3B-P0W">
+                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ll9-ZR-aDg">
+                                                        <rect key="frame" x="177" y="0.0" width="177" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Q0B-3B-P0W" firstAttribute="width" secondItem="Ll9-ZR-aDg" secondAttribute="width" id="2Eb-cf-Ssn"/>
+                                                </constraints>
+                                            </stackView>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HTE-oy-qN9">
+                                                <rect key="frame" x="-2" y="20.5" width="358" height="31"/>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCB-VG-avK">
-                                        <rect key="frame" x="0.0" y="304" width="354" height="31"/>
+                                        <rect key="frame" x="0.0" y="465.5" width="354" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Continue"/>
                                         <connections>
@@ -157,20 +239,25 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hv9-um-eum" secondAttribute="trailing" constant="30" id="nGI-ak-d9f"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tfT-GK-9oU"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="tfT-GK-9oU"/>
                     <connections>
                         <outlet property="ageTextField" destination="31g-wV-exv" id="bcR-sm-JMz"/>
                         <outlet property="continueButton" destination="TCB-VG-avK" id="Lyq-4q-dqo"/>
                         <outlet property="emailTextField" destination="pXM-Qr-2Td" id="Za0-IQ-w4m"/>
                         <outlet property="firstNameTextField" destination="bmF-Dd-n2C" id="ELS-BW-qTc"/>
                         <outlet property="lastNameTextField" destination="1Vk-Lx-DOh" id="Dvq-Pu-1zB"/>
+                        <outlet property="pageFourStack" destination="Gqp-xf-5pU" id="Cp2-w3-nMT"/>
                         <outlet property="pageOneStack" destination="RFA-lR-vfe" id="dep-Rt-58K"/>
+                        <outlet property="pageThreeStack" destination="06Q-SQ-W7x" id="OJw-2g-sHX"/>
                         <outlet property="pageTwoStack" destination="xJP-tY-qso" id="bbX-Dd-wQP"/>
-                        <outlet property="password" destination="iNw-89-bgW" id="bMc-Kb-jE0"/>
-                        <outlet property="retypePassword" destination="7F8-mo-tCD" id="KAa-97-5hH"/>
+                        <outlet property="riskToleranceSlider" destination="HTE-oy-qN9" id="wRg-s7-ujl"/>
                         <outletCollection property="pageTwoChoices" destination="11i-YV-mOQ" collectionClass="NSMutableArray" id="zmL-m1-YYi"/>
                         <outletCollection property="pageTwoChoices" destination="ES2-yb-Sli" collectionClass="NSMutableArray" id="UAy-fe-VSB"/>
                         <outletCollection property="pageTwoChoices" destination="zng-S7-Ot9" collectionClass="NSMutableArray" id="T8O-Io-Pph"/>
+                        <outletCollection property="pageThreeChoices" destination="wMU-Fb-tsX" collectionClass="NSMutableArray" id="fGi-Mn-Ebs"/>
+                        <outletCollection property="pageThreeChoices" destination="wNa-Ic-fah" collectionClass="NSMutableArray" id="Aqa-q7-5bt"/>
+                        <outletCollection property="pageThreeChoices" destination="dry-Nc-Ztw" collectionClass="NSMutableArray" id="DfW-EB-dWI"/>
+                        <outletCollection property="pageThreeChoices" destination="r8f-3t-lji" collectionClass="NSMutableArray" id="S8f-Be-BUt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -184,6 +271,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5zG-KZ-gD0">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance">
+                            <textAttributes key="titleTextAttributes"/>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5wa-cr-qmL"/>

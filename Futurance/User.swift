@@ -11,19 +11,19 @@ struct User {
     //Page 1: Info
     let firstName: String
     let lastName: String
-    var Age: Int
+    var age: Int
     let email: String
     
     //Page 2: Life Situation
-    enum WorkStatusType {
+    public enum WorkStatusType {
         case partTime, fullTime, student
     }
     
     var workStatus: [WorkStatusType]
     
     //Page 3: Investing goals
-    enum GoalType {
-        case studentLoans, saveForHome, saveForRetirement
+    public enum GoalType {
+        case studentLoans, saveForHome, saveForRetirement, saveForCar
     }
     
     var studentLoanDebtRemaining: Double?
@@ -31,7 +31,7 @@ struct User {
     var investingGoals: [GoalType]
     
     //Page 4: Risk Tolerance
-    enum ToleranceLevel {
+    public enum ToleranceLevel {
         case low, medium, high
     }
     
@@ -41,11 +41,11 @@ struct User {
     var endDate: Date
     
     //Page 6: Types of Investments and Priorities
-    enum InvestmentModes {
+    public enum InvestmentModes {
         case stocks, bonds, ETFs, crypto
     }
     
-    enum InvestmentPriorities {
+    public enum InvestmentPriorities {
         case ESG
     }
     
