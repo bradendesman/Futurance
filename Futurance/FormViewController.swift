@@ -62,6 +62,12 @@ class FormViewController: UIViewController, UITextFieldDelegate {
     @IBAction func emailTextFieldChanged(_ sender: Any) {
         updateContinueButton()
     }
+    @IBAction func passwordTextFieldChanged(_ sender: Any) {
+        updateContinueButton()
+    }
+    @IBAction func retypePasswordFieldChanged(_ sender: Any) {
+        updateContinueButton()
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -139,7 +145,7 @@ class FormViewController: UIViewController, UITextFieldDelegate {
     
     func configureFields() {
         pages = [pageOneStack, pageTwoStack, pageThreeStack, pageFourStack]
-        fields = [firstNameTextField, lastNameTextField,ageTextField,emailTextField]
+        fields = [firstNameTextField, lastNameTextField,ageTextField,emailTextField, passwordTextField, retypePasswordTextField]
         
         for field in fields {
             guard let currentField = field as? UITextField else {return}
