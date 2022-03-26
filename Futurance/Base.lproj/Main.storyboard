@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="hv9-um-eum">
-                                <rect key="frame" x="30" y="154" width="354" height="588"/>
+                                <rect key="frame" x="30" y="72" width="354" height="752"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hWA-DA-dAj">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="66.5"/>
@@ -88,7 +88,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11i-YV-mOQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="31"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="30S-U2-AoE">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" image="checkmark.circle.fill" catalog="system" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="30S-U2-AoE">
                                                         <rect key="frame" x="0.0" y="0.5" width="20" height="30"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avj-Jl-cn5">
@@ -236,8 +236,77 @@
                                             </slider>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="brh-Dj-RmP">
+                                        <rect key="frame" x="0.0" y="557" width="354" height="139"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GE4-3R-eDu">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="31"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FlL-5m-KdA">
+                                                        <rect key="frame" x="0.0" y="0.5" width="20" height="30"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1Y-zH-8L3">
+                                                        <rect key="frame" x="20" y="0.0" width="334" height="31"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Stocks"/>
+                                                        <connections>
+                                                            <action selector="investingModesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aJE-P4-Tk5"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqm-oZ-4Ew">
+                                                <rect key="frame" x="0.0" y="36" width="354" height="31"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3UQ-en-9N9">
+                                                        <rect key="frame" x="0.0" y="0.5" width="20" height="30"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdN-NE-juT">
+                                                        <rect key="frame" x="20" y="0.0" width="334" height="31"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="ETFs and Mutual Funds"/>
+                                                        <connections>
+                                                            <action selector="investingModesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7M6-l2-QS0"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQ6-P6-05c">
+                                                <rect key="frame" x="0.0" y="72" width="354" height="31"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Xyf-32-ngH">
+                                                        <rect key="frame" x="0.0" y="0.5" width="20" height="30"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfE-fe-HXR">
+                                                        <rect key="frame" x="20" y="0.0" width="334" height="31"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Bonds"/>
+                                                        <connections>
+                                                            <action selector="investingModesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f5E-v0-33j"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFc-9Z-Hjt">
+                                                <rect key="frame" x="0.0" y="108" width="354" height="31"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="r6c-wq-dsc">
+                                                        <rect key="frame" x="0.0" y="0.5" width="20" height="30"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlN-oe-JHG">
+                                                        <rect key="frame" x="20" y="0.0" width="334" height="31"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Cryptocurrency"/>
+                                                        <connections>
+                                                            <action selector="investingModesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BTS-2p-AZP"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCB-VG-avK">
-                                        <rect key="frame" x="0.0" y="557" width="354" height="31"/>
+                                        <rect key="frame" x="0.0" y="721" width="354" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Continue"/>
                                         <connections>
@@ -263,6 +332,7 @@
                         <outlet property="emailTextField" destination="pXM-Qr-2Td" id="Za0-IQ-w4m"/>
                         <outlet property="firstNameTextField" destination="bmF-Dd-n2C" id="ELS-BW-qTc"/>
                         <outlet property="lastNameTextField" destination="1Vk-Lx-DOh" id="Dvq-Pu-1zB"/>
+                        <outlet property="pageFiveStack" destination="brh-Dj-RmP" id="bLi-8m-8sn"/>
                         <outlet property="pageFourStack" destination="Gqp-xf-5pU" id="Cp2-w3-nMT"/>
                         <outlet property="pageOneStack" destination="RFA-lR-vfe" id="dep-Rt-58K"/>
                         <outlet property="pageThreeStack" destination="06Q-SQ-W7x" id="OJw-2g-sHX"/>
@@ -277,6 +347,10 @@
                         <outletCollection property="pageThreeChoices" destination="wNa-Ic-fah" collectionClass="NSMutableArray" id="Aqa-q7-5bt"/>
                         <outletCollection property="pageThreeChoices" destination="dry-Nc-Ztw" collectionClass="NSMutableArray" id="DfW-EB-dWI"/>
                         <outletCollection property="pageThreeChoices" destination="r8f-3t-lji" collectionClass="NSMutableArray" id="S8f-Be-BUt"/>
+                        <outletCollection property="pageFiveChoices" destination="GE4-3R-eDu" collectionClass="NSMutableArray" id="Rlh-0A-XP4"/>
+                        <outletCollection property="pageFiveChoices" destination="cqm-oZ-4Ew" collectionClass="NSMutableArray" id="0S6-Cg-1Wa"/>
+                        <outletCollection property="pageFiveChoices" destination="DQ6-P6-05c" collectionClass="NSMutableArray" id="qKi-8y-CaC"/>
+                        <outletCollection property="pageFiveChoices" destination="hFc-9Z-Hjt" collectionClass="NSMutableArray" id="AWR-dl-KcM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

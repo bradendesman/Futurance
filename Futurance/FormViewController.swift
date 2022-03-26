@@ -21,6 +21,7 @@ class FormViewController: UIViewController, UITextFieldDelegate {
     var workStatus: [User.WorkStatusType]!
     var investmentGoals: [User.GoalType]!
     var riskTolerance: User.ToleranceLevel!
+    var investmentModes: [User.InvestmentModes]!
     //MARK: Page 0 Outlets
     @IBOutlet var pageOneStack: UIStackView!
     @IBOutlet var firstNameTextField: UITextField!
@@ -39,6 +40,11 @@ class FormViewController: UIViewController, UITextFieldDelegate {
     //MARK: Page 3 Outlets
     @IBOutlet var pageFourStack: UIStackView!
     @IBOutlet var riskToleranceSlider: UISlider!
+    
+    //MARK: Page 4 Outlets
+    @IBOutlet var pageFiveStack: UIStackView!
+    @IBOutlet var pageFiveChoices: [UIStackView]!
+    
     
     
     var fields: [UIControl]!
@@ -83,6 +89,11 @@ class FormViewController: UIViewController, UITextFieldDelegate {
         updateContinueButton()
     }
     
+    @IBAction func investingModesButtonPressed(_ sender: UIButton) {
+        let stack = sender.superview as! UIStackView
+        stack.arrangedSubviews[0].isHidden.toggle()
+        updateContinueButton()
+    }
     
     
     
@@ -131,6 +142,22 @@ class FormViewController: UIViewController, UITextFieldDelegate {
             } else {
                 riskTolerance = .high
             }
+        } else if pageNumber == 4 {
+            investmentModes = []
+            for i in 0...pageFiveChoices.count - 1 {
+                if !pageFiveChoices[i].arrangedSubviews[0].isHidden {
+                    switch i {
+                    case 0: investmentModes.append(.stocks)
+                    case 1:
+                        investmentModes.append(.ETFs)
+                    case 2:
+                        investmentModes.append(.bonds)
+                    case 3:
+                        investmentModes.append(.crypto)
+                    default: investmentModes = []
+                    }
+                }
+            }
         }
         
         
@@ -159,11 +186,14 @@ class FormViewController: UIViewController, UITextFieldDelegate {
         } else if pageNumber == 3 {
             titleLabel.text = "Risk"
             subtitleLabel.text = "Everyone has a difference level of risk tolerance. Let's find out yours!"
+        } else if pageNumber == 4 {
+            titleLabel.text = "Asset Types"
+            subtitleLabel.text = "There are several different types of assets you may want to invest in. Let us know which ones you're interested in here!"
         }
     }
     
     func configureFields() {
-        pages = [pageOneStack, pageTwoStack, pageThreeStack, pageFourStack]
+        pages = [pageOneStack, pageTwoStack, pageThreeStack, pageFourStack, pageFiveStack]
         fields = [firstNameTextField, lastNameTextField,ageTextField,emailTextField]
         
         for field in fields {
@@ -183,6 +213,9 @@ class FormViewController: UIViewController, UITextFieldDelegate {
         }
         for i in 0...pageThreeChoices.count-1 {
             pageThreeChoices[i].arrangedSubviews[0].isHidden = true
+        }
+        for i in 0...pageFiveChoices.count-1 {
+            pageFiveChoices[i].arrangedSubviews[0].isHidden = true
         }
         continueButton.isEnabled = false
     }
@@ -229,6 +262,20 @@ class FormViewController: UIViewController, UITextFieldDelegate {
             var choicesSelected = 0
             for i in 0...pageThreeChoices.count-1 {
                 if !pageThreeChoices[i].arrangedSubviews[0].isHidden {
+                    choicesSelected += 1
+                }
+            }
+            if choicesSelected > 0 {
+                continueButton.isEnabled = true
+            }
+            else {
+                continueButton.isEnabled = false
+            }
+        }
+        if pageNumber == 4 {
+            var choicesSelected = 0
+            for i in 0...pageFiveChoices.count-1 {
+                if !pageFiveChoices[i].arrangedSubviews[0].isHidden {
                     choicesSelected += 1
                 }
             }
