@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="hv9-um-eum">
-                                <rect key="frame" x="30" y="237.5" width="354" height="421"/>
+                                <rect key="frame" x="30" y="200" width="354" height="496.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RFA-lR-vfe">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="73"/>
@@ -191,8 +191,36 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Gqp-xf-5pU">
+                                        <rect key="frame" x="0.0" y="390" width="354" height="50.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lS-8F-j0c">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0B-3B-P0W">
+                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ll9-ZR-aDg">
+                                                        <rect key="frame" x="177" y="0.0" width="177" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Q0B-3B-P0W" firstAttribute="width" secondItem="Ll9-ZR-aDg" secondAttribute="width" id="2Eb-cf-Ssn"/>
+                                                </constraints>
+                                            </stackView>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HTE-oy-qN9">
+                                                <rect key="frame" x="-2" y="20.5" width="358" height="31"/>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCB-VG-avK">
-                                        <rect key="frame" x="0.0" y="390" width="354" height="31"/>
+                                        <rect key="frame" x="0.0" y="465.5" width="354" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Continue"/>
                                         <connections>
@@ -218,9 +246,11 @@
                         <outlet property="emailTextField" destination="pXM-Qr-2Td" id="Za0-IQ-w4m"/>
                         <outlet property="firstNameTextField" destination="bmF-Dd-n2C" id="ELS-BW-qTc"/>
                         <outlet property="lastNameTextField" destination="1Vk-Lx-DOh" id="Dvq-Pu-1zB"/>
+                        <outlet property="pageFourStack" destination="Gqp-xf-5pU" id="Cp2-w3-nMT"/>
                         <outlet property="pageOneStack" destination="RFA-lR-vfe" id="dep-Rt-58K"/>
                         <outlet property="pageThreeStack" destination="06Q-SQ-W7x" id="OJw-2g-sHX"/>
                         <outlet property="pageTwoStack" destination="xJP-tY-qso" id="bbX-Dd-wQP"/>
+                        <outlet property="riskToleranceSlider" destination="HTE-oy-qN9" id="wRg-s7-ujl"/>
                         <outletCollection property="pageTwoChoices" destination="11i-YV-mOQ" collectionClass="NSMutableArray" id="zmL-m1-YYi"/>
                         <outletCollection property="pageTwoChoices" destination="ES2-yb-Sli" collectionClass="NSMutableArray" id="UAy-fe-VSB"/>
                         <outletCollection property="pageTwoChoices" destination="zng-S7-Ot9" collectionClass="NSMutableArray" id="T8O-Io-Pph"/>

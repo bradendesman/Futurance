@@ -33,6 +33,10 @@ class FormViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var pageThreeStack: UIStackView!
     @IBOutlet var pageThreeChoices: [UIStackView]!
     
+    //MARK: Page 3 Outlets
+    @IBOutlet var pageFourStack: UIStackView!
+    @IBOutlet var riskToleranceSlider: UISlider!
+    
     
     var fields: [UIControl]!
     var pages: [UIStackView]!
@@ -124,12 +128,15 @@ class FormViewController: UIViewController, UITextFieldDelegate {
             pageNumber += 1
             pages[pageNumber].isHidden = false
             continueButton.isEnabled = false
+            if pageNumber == 3 {
+                continueButton.isEnabled = true
+            }
         }
         
     }
     
     func configureFields() {
-        pages = [pageOneStack, pageTwoStack, pageThreeStack]
+        pages = [pageOneStack, pageTwoStack, pageThreeStack, pageFourStack]
         fields = [firstNameTextField, lastNameTextField,ageTextField,emailTextField]
         
         for field in fields {
