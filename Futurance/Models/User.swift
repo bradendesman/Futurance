@@ -22,8 +22,11 @@ struct User {
     var workStatus: [WorkStatusType]
     
     //Page 3: Investing goals
-    public enum GoalType {
-        case studentLoans, saveForHome, saveForRetirement, saveForCar
+    public enum GoalType: String {
+        case studentLoans = "Student Loan"
+        case saveForHome = "Home Savings"
+        case saveForRetirement = "Retirement Savings"
+        case saveForCar = "Car Savings"
     }
     
     var studentLoanDebtRemaining: Double?
@@ -38,7 +41,7 @@ struct User {
     var riskTolerance: ToleranceLevel
     
     //Page 5: Timeline
-    var endDate: Date
+//    var endDate: Date
     
     //Page 6: Types of Investments and Priorities
     public enum InvestmentModes {
@@ -50,5 +53,5 @@ struct User {
     }
     
     var investmentModes: [InvestmentModes]
-    var investmentPriorities: [InvestmentPriorities]
+//    var investmentPriorities: [InvestmentPriorities]
 }
