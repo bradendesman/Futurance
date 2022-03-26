@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aHd-Nj-kBn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aHd-Nj-kBn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="hv9-um-eum">
-                                <rect key="frame" x="30" y="319.5" width="354" height="257"/>
+                                <rect key="frame" x="30" y="280.5" width="354" height="335"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RFA-lR-vfe">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="73"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="151"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OAe-dm-q3i">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
@@ -63,10 +63,20 @@
                                                     <action selector="emailTextFieldChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="qDQ-Ie-vLB"/>
                                                 </connections>
                                             </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iNw-89-bgW">
+                                                <rect key="frame" x="0.0" y="78" width="354" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-type Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7F8-mo-tCD">
+                                                <rect key="frame" x="0.0" y="117" width="354" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xJP-tY-qso">
-                                        <rect key="frame" x="0.0" y="98" width="354" height="103"/>
+                                        <rect key="frame" x="0.0" y="176" width="354" height="103"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11i-YV-mOQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="31"/>
@@ -128,7 +138,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCB-VG-avK">
-                                        <rect key="frame" x="0.0" y="226" width="354" height="31"/>
+                                        <rect key="frame" x="0.0" y="304" width="354" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Continue"/>
                                         <connections>
@@ -156,6 +166,8 @@
                         <outlet property="lastNameTextField" destination="1Vk-Lx-DOh" id="Dvq-Pu-1zB"/>
                         <outlet property="pageOneStack" destination="RFA-lR-vfe" id="dep-Rt-58K"/>
                         <outlet property="pageTwoStack" destination="xJP-tY-qso" id="bbX-Dd-wQP"/>
+                        <outlet property="password" destination="iNw-89-bgW" id="bMc-Kb-jE0"/>
+                        <outlet property="retypePassword" destination="7F8-mo-tCD" id="KAa-97-5hH"/>
                         <outletCollection property="pageTwoChoices" destination="11i-YV-mOQ" collectionClass="NSMutableArray" id="zmL-m1-YYi"/>
                         <outletCollection property="pageTwoChoices" destination="ES2-yb-Sli" collectionClass="NSMutableArray" id="UAy-fe-VSB"/>
                         <outletCollection property="pageTwoChoices" destination="zng-S7-Ot9" collectionClass="NSMutableArray" id="T8O-Io-Pph"/>

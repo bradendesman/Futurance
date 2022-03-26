@@ -6,18 +6,20 @@
 //
 
 import UIKit
-
+import Firebase
 class FormViewController: UIViewController, UITextFieldDelegate {
     
     var pageNumber: Int = 0
     @IBOutlet var continueButton: UIButton!
     
     //MARK: Page 0 Outlets
-    @IBOutlet var pageOneStack: UIStackView!
+    @IBOutlet var pageOneStack: UIStackView! //outlets lets you view text fields
     @IBOutlet var firstNameTextField: UITextField!
     @IBOutlet var lastNameTextField: UITextField!
     @IBOutlet var ageTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var retypePasswordTextField: UITextField!
     
     //MARK: Page 1 Outlets
     @IBOutlet var pageTwoStack: UIStackView!
@@ -37,7 +39,7 @@ class FormViewController: UIViewController, UITextFieldDelegate {
     
     
     //MARK: Page 0 Logic
-    @IBAction func firstNameTextFieldChangd(_ sender: Any) {
+    @IBAction func firstNameTextFieldChangd(_ sender: Any) { //functions run when field is triggered
         updateContinueButton()
     }
     @IBAction func lastNameTextFieldChanged(_ sender: Any) {
@@ -66,6 +68,7 @@ class FormViewController: UIViewController, UITextFieldDelegate {
     //MARK: Update Button Logic
     
     @IBAction func presentNextQuestions(_ sender: Any) {
+        createAccount(email, password)
         if pageNumber == (pages.count - 1) {
             print("end")
         }
@@ -107,6 +110,10 @@ class FormViewController: UIViewController, UITextFieldDelegate {
             guard !firstName.isEmpty, !lastName.isEmpty, !email.isEmpty, !age.isEmpty else {return}
             
             guard let ageNumber = Int(age), ageNumber > 0 else {return}
+            guard let password = passwordTextField.text
+                else {return}
+            guard let retypePassword = retypePasswordTextField.text
+                else {return}
             let allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' "
             
             for char in firstName {
@@ -121,8 +128,16 @@ class FormViewController: UIViewController, UITextFieldDelegate {
                 }
                 if !allowedChars.contains(char) {return}
             }
+            
+            guard password.isEmpty == false else {return} //if the statement is true, code will continue, if the guard is false it will execute return.
+            guard password == retypePassword else {return}
             continueButton.isEnabled = true
         }
         
+    }
+    func createAccount(email: String, password: String){
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+          // ...
+        }
     }
 }
