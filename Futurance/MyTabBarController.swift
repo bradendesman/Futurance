@@ -11,6 +11,7 @@ class MyTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("tab loaded")
         navigationItem.hidesBackButton = true
         navigationItem.backButtonTitle = ""
         

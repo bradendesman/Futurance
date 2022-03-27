@@ -1,20 +1,16 @@
 //
-//  StatusViewController.swift
+//  StatusNavigationController.swift
 //  Futurance
 //
-//  Created by Braden Desman on 3/26/22.
+//  Created by Braden Desman on 3/27/22.
 //
 
 import UIKit
 
-class StatusViewController: UIViewController {
-
-    var user: User!
-    var savings: [User.GoalType : Float]!
+class StatusNavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Welcome, \(user.firstName)"
         // Do any additional setup after loading the view.
     }
     

@@ -361,6 +361,7 @@
                         <outletCollection property="pageFiveChoices" destination="DQ6-P6-05c" collectionClass="NSMutableArray" id="qKi-8y-CaC"/>
                         <outletCollection property="pageFiveChoices" destination="hFc-9Z-Hjt" collectionClass="NSMutableArray" id="AWR-dl-KcM"/>
                         <segue destination="NTr-Kw-fp8" kind="show" identifier="completeForm" id="A3N-kB-seo"/>
+                        <segue destination="YzU-bf-j5m" kind="presentation" identifier="subsequentLaunches" animates="NO" modalPresentationStyle="fullScreen" id="iXs-0x-RpR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -467,7 +468,7 @@
                     <viewLayoutGuide key="safeArea" id="ni8-KW-p4g"/>
                 </stackView>
             </objects>
-            <point key="canvasLocation" x="-746" y="524"/>
+            <point key="canvasLocation" x="-746" y="548"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZRy-5F-EKp">
@@ -505,7 +506,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9p1-ty-rgJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="563"/>
+            <point key="canvasLocation" x="458" y="524"/>
         </scene>
         <!--Education Collection View Controller-->
         <scene sceneID="hgC-V9-omw">
@@ -564,7 +565,7 @@
         <!--Status-->
         <scene sceneID="b3X-4i-hey">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f56-Lf-GK7" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f56-Lf-GK7" customClass="StatusNavigationController" customModule="Futurance" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Status" image="chart.line.uptrend.xyaxis" catalog="system" selectedImage="chart.line.uptrend.xyaxis" id="QAS-P3-eOz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vbe-zL-JmQ">
@@ -578,7 +579,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YWy-0G-pNL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="-171"/>
+            <point key="canvasLocation" x="458" y="-171"/>
         </scene>
         <!--Education-->
         <scene sceneID="nom-Gd-8Em">
@@ -600,6 +601,9 @@
             <point key="canvasLocation" x="1532" y="-171"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="iXs-0x-RpR"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="books.vertical" catalog="system" width="128" height="107"/>
         <image name="books.vertical.fill" catalog="system" width="128" height="109"/>

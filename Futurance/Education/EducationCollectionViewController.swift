@@ -12,8 +12,6 @@ private let reuseIdentifier = "Cell"
 class EducationCollectionViewController: UICollectionViewController {
 
     var articles: [EducationArticle] = [
-        
-    
     ]
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -10,15 +10,48 @@ import UIKit
 class SecondaryFormTableViewController: UITableViewController, SecondaryCellDelegate, UITextFieldDelegate, ContinueCellDelegate {
     
     func continueButtonPressed() {
+        saveUserAndSavings()
         performSegue(withIdentifier: "exitForms", sender: nil)
     }
     
+    func saveUserAndSavings() {
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let archiveURL = documentsDirectory.appendingPathComponent("userData").appendingPathExtension("plist")
+        let propertylistEnoder = PropertyListEncoder()
+        if let encodedUser = try? propertylistEnoder.encode(user) {
+            try? encodedUser.write(to: archiveURL, options: .noFileProtection)
+        }
+        
+        let savingsArchiveURL = documentsDirectory.appendingPathComponent("savingsData").appendingPathExtension("plist")
+        if let encodedSavings = try? propertylistEnoder.encode(savings) {
+            try? encodedSavings.write(to:savingsArchiveURL, options: .noFileProtection)
+        }
+        
+        
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tabBar = segue.destination as! MyTabBarController
-        let nav = tabBar.viewControllers![0] as! UINavigationController
-        let destination = nav.viewControllers.first! as! StatusViewController
-        destination.user = user
-        destination.savings = savings
+        if segue.identifier == "subsequentExits" {
+            let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+            let archiveURL = documentsDirectory.appendingPathComponent("userData").appendingPathExtension("plist")
+            let savingsArchiveURL = documentsDirectory.appendingPathComponent("savingsData").appendingPathExtension("plist")
+            
+            let propertyListDecoder = PropertyListDecoder()
+            guard let retrievedUserData = try? Data(contentsOf: archiveURL), let decodedUser = try? propertyListDecoder.decode(User.self, from: retrievedUserData) else {return}
+            guard let retrievedSavingsData = try? Data(contentsOf: savingsArchiveURL), let decodedSavings = try? propertyListDecoder.decode([User.GoalType : Float].self, from: retrievedSavingsData) else {return}
+            
+            let tabBar = segue.destination as! MyTabBarController
+            let nav = tabBar.viewControllers![0] as! UINavigationController
+            let destination = nav.viewControllers.first! as! StatusViewController
+            destination.user = decodedUser
+            destination.savings = decodedSavings
+            
+        } else {
+            let tabBar = segue.destination as! MyTabBarController
+            let nav = tabBar.viewControllers![0] as! UINavigationController
+            let destination = nav.viewControllers.first! as! StatusViewController
+            destination.user = user
+            destination.savings = savings
+        }
     }
     
     
@@ -31,6 +64,7 @@ class SecondaryFormTableViewController: UITableViewController, SecondaryCellDele
         }
     }
     
+    let defaults = UserDefaults.standard
     var user: User!
     var goals: [User.GoalType]!
     var savings: [User.GoalType : Float] = [:]
@@ -38,9 +72,9 @@ class SecondaryFormTableViewController: UITableViewController, SecondaryCellDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let user = user else {return}
         let continueCell = tableView(tableView, cellForRowAt: IndexPath(row: 0, section: goals!.count)) as! ContinueTableViewCell
         continueCell.continueButton.isEnabled = false
+        
     }
 
     // MARK: - Table view data source
