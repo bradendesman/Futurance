@@ -15,9 +15,11 @@
 		F83576E127EF73A900890586 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83576DF27EF73A900890586 /* LaunchScreen.storyboard */; };
 		F83576E927EF7A6B00890586 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83576E827EF7A6B00890586 /* User.swift */; };
 		F83576EB27EF7C8C00890586 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83576EA27EF7C8C00890586 /* FormViewController.swift */; };
+		F85DF98E27F000860039B398 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85DF98D27F000860039B398 /* StatusViewController.swift */; };
+		F85DF99427F018F70039B398 /* EducationCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85DF99327F018F70039B398 /* EducationCollectionViewController.swift */; };
+		F85DF99627F019A00039B398 /* EducationArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85DF99527F019A00039B398 /* EducationArticle.swift */; };
 		F8AE924827EFD3D800D9F805 /* SecondaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE924727EFD3D800D9F805 /* SecondaryTableViewCell.swift */; };
 		F8AE924A27EFDE3900D9F805 /* ContinueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE924927EFDE3900D9F805 /* ContinueTableViewCell.swift */; };
-		F8AE924C27EFEC7400D9F805 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE924B27EFEC7400D9F805 /* EducationViewController.swift */; };
 		F8AE924E27EFEDC100D9F805 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE924D27EFEDC100D9F805 /* MyTabBarController.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,9 +34,11 @@
 		F83576E227EF73A900890586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F83576E827EF7A6B00890586 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F83576EA27EF7C8C00890586 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		F85DF98D27F000860039B398 /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		F85DF99327F018F70039B398 /* EducationCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationCollectionViewController.swift; sourceTree = "<group>"; };
+		F85DF99527F019A00039B398 /* EducationArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationArticle.swift; sourceTree = "<group>"; };
 		F8AE924727EFD3D800D9F805 /* SecondaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryTableViewCell.swift; sourceTree = "<group>"; };
 		F8AE924927EFDE3900D9F805 /* ContinueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueTableViewCell.swift; sourceTree = "<group>"; };
-		F8AE924B27EFEC7400D9F805 /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
 		F8AE924D27EFEDC100D9F805 /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,8 +83,9 @@
 				F83576D427EF73A800890586 /* AppDelegate.swift */,
 				F83576D627EF73A800890586 /* SceneDelegate.swift */,
 				F83576DA27EF73A800890586 /* Main.storyboard */,
+				F85DF98D27F000860039B398 /* StatusViewController.swift */,
 				F8AE924D27EFEDC100D9F805 /* MyTabBarController.swift */,
-				F8AE924B27EFEC7400D9F805 /* EducationViewController.swift */,
+				F85DF99727F019AA0039B398 /* Education */,
 				F8AE924F27EFF92200D9F805 /* Initial Form */,
 				F80E6BB927EFBE770027694C /* Models */,
 				F83576DD27EF73A900890586 /* Assets.xcassets */,
@@ -88,6 +93,15 @@
 				F83576E227EF73A900890586 /* Info.plist */,
 			);
 			path = Futurance;
+			sourceTree = "<group>";
+		};
+		F85DF99727F019AA0039B398 /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				F85DF99327F018F70039B398 /* EducationCollectionViewController.swift */,
+				F85DF99527F019A00039B398 /* EducationArticle.swift */,
+			);
+			path = Education;
 			sourceTree = "<group>";
 		};
 		F8AE924F27EFF92200D9F805 /* Initial Form */ = {
@@ -173,14 +187,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F83576E927EF7A6B00890586 /* User.swift in Sources */,
+				F85DF99627F019A00039B398 /* EducationArticle.swift in Sources */,
 				F83576D527EF73A800890586 /* AppDelegate.swift in Sources */,
 				F8AE924E27EFEDC100D9F805 /* MyTabBarController.swift in Sources */,
 				F8AE924827EFD3D800D9F805 /* SecondaryTableViewCell.swift in Sources */,
-				F8AE924C27EFEC7400D9F805 /* EducationViewController.swift in Sources */,
+				F85DF98E27F000860039B398 /* StatusViewController.swift in Sources */,
 				F80E6BBD27EFCC400027694C /* SecondaryFormTableViewController.swift in Sources */,
 				F8AE924A27EFDE3900D9F805 /* ContinueTableViewCell.swift in Sources */,
 				F83576EB27EF7C8C00890586 /* FormViewController.swift in Sources */,
 				F83576D727EF73A800890586 /* SceneDelegate.swift in Sources */,
+				F85DF99427F018F70039B398 /* EducationCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

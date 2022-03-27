@@ -1,5 +1,5 @@
 //
-//  EducationViewController.swift
+//  StatusViewController.swift
 //  Futurance
 //
 //  Created by Braden Desman on 3/26/22.
@@ -7,12 +7,14 @@
 
 import UIKit
 
-class EducationViewController: UIViewController {
+class StatusViewController: UIViewController {
 
+    var user: User!
+    var savings: [User.GoalType : Float]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true
-        self.navigationItem.backButtonTitle = ""
+        // Do any additional setup after loading the view.
     }
     
 

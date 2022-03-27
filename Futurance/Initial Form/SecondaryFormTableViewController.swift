@@ -10,17 +10,22 @@ import UIKit
 class SecondaryFormTableViewController: UITableViewController, SecondaryCellDelegate, UITextFieldDelegate, ContinueCellDelegate {
     
     func continueButtonPressed() {
-        print("continued")
         performSegue(withIdentifier: "exitForms", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tabBar = segue.destination as! MyTabBarController
+        let nav = tabBar.viewControllers![0] as! UINavigationController
+        let destination = nav.viewControllers.first! as! StatusViewController
+        destination.user = user
+        destination.savings = savings
     }
     
     
     func store(_ type: User.GoalType, savingsValue: Float) {
         savings[type] = savingsValue
         let continueCell = tableView(tableView, cellForRowAt: IndexPath(row: 0, section: goals!.count)) as! ContinueTableViewCell
-        print("stored")
         if savings.count == goals.count {
-            print("here")
             continueCell.continueButton.isEnabled = true
             tableView.reloadRows(at: [IndexPath(row: 0, section: goals.count)], with: .fade)
         }

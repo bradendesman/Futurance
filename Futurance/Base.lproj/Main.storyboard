@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -456,7 +457,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="rQJ-6g-zMd"/>
                     <connections>
-                        <segue destination="YzU-bf-j5m" kind="show" identifier="exitForms" id="JGp-k4-9Ev"/>
+                        <segue destination="YzU-bf-j5m" kind="presentation" identifier="exitForms" modalPresentationStyle="fullScreen" id="JGp-k4-9Ev"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tyc-fZ-u7P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -490,37 +491,56 @@
             </objects>
             <point key="canvasLocation" x="-746" y="-887"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="QQU-N6-NyY">
-            <objects>
-                <viewController storyboardIdentifier="education" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JAq-ox-Qh5" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="HC1-ZI-0Kx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="N6t-1O-zpT"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="K2w-5u-I2p"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H9V-4I-9LW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1543" y="366"/>
-        </scene>
-        <!--Education View Controller-->
+        <!--Status-->
         <scene sceneID="nWw-cY-fK9">
             <objects>
-                <viewController id="T5U-6X-ovO" customClass="EducationViewController" customModule="Futurance" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="T5U-6X-ovO" customClass="StatusViewController" customModule="Futurance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Td-cH-j67">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="IHL-Yt-jcF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cbR-fJ-U44"/>
+                    <navigationItem key="navigationItem" title="Status" largeTitleDisplayMode="always" id="cbR-fJ-U44"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9p1-ty-rgJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="471" y="341"/>
+            <point key="canvasLocation" x="459" y="563"/>
+        </scene>
+        <!--Education Collection View Controller-->
+        <scene sceneID="hgC-V9-omw">
+            <objects>
+                <collectionViewController id="RcL-V4-KQC" customClass="EducationCollectionViewController" customModule="Futurance" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="VHm-3R-b6x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RYv-lA-QuM">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Tky-P8-oWS">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uNP-8K-Xbg">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="RcL-V4-KQC" id="X2N-Ve-MwD"/>
+                            <outlet property="delegate" destination="RcL-V4-KQC" id="jvU-GD-m0z"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="Oka-2i-uli"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ffu-ka-4je" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="524"/>
         </scene>
         <!--My Tab Bar Controller-->
         <scene sceneID="7ZX-OM-XIM">
@@ -539,16 +559,16 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dai-rZ-xKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="997" y="-1221"/>
+            <point key="canvasLocation" x="459" y="-1199"/>
         </scene>
-        <!--Item 1-->
+        <!--Status-->
         <scene sceneID="b3X-4i-hey">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f56-Lf-GK7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="QAS-P3-eOz"/>
+                    <tabBarItem key="tabBarItem" title="Status" image="chart.line.uptrend.xyaxis" catalog="system" selectedImage="chart.line.uptrend.xyaxis" id="QAS-P3-eOz"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vbe-zL-JmQ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vbe-zL-JmQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -558,29 +578,32 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YWy-0G-pNL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="470" y="-393"/>
+            <point key="canvasLocation" x="459" y="-171"/>
         </scene>
-        <!--Item 2-->
+        <!--Education-->
         <scene sceneID="nom-Gd-8Em">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aj1-gb-6gh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="zjK-F6-Df8"/>
+                    <tabBarItem key="tabBarItem" title="Education" image="books.vertical" catalog="system" selectedImage="books.vertical.fill" id="zjK-F6-Df8"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qm4-fp-iR0">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="qm4-fp-iR0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="JAq-ox-Qh5" kind="relationship" relationship="rootViewController" id="IxC-PV-YjA"/>
+                        <segue destination="RcL-V4-KQC" kind="show" id="ny5-Fp-vpI"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uHn-Sp-FjH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1543" y="-393"/>
+            <point key="canvasLocation" x="1532" y="-171"/>
         </scene>
     </scenes>
     <resources>
+        <image name="books.vertical" catalog="system" width="128" height="107"/>
+        <image name="books.vertical.fill" catalog="system" width="128" height="109"/>
+        <image name="chart.line.uptrend.xyaxis" catalog="system" width="128" height="101"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
