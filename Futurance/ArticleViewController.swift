@@ -14,12 +14,14 @@ class ArticleViewController: UIViewController {
     @IBOutlet var authorLabel: UILabel!
     @IBOutlet var contentLabel: UILabel!
     @IBOutlet var spacer2: UILabel!
+    @IBOutlet var sourceLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = article.title
         authorLabel.text = article.author
         contentLabel.text = article.content
+        sourceLabel.text = article.source
         spacer2.text = ""
         // Do any additional setup after loading the view.
     }

@@ -10,14 +10,29 @@ import UIKit
 class StatusViewController: UIViewController {
 
     var user: User!
+    @IBOutlet var welcomeLabel: UILabel!
     var savings: [User.GoalType : Float]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Welcome, \(user.firstName)"
+        navigationItem.title = ""
+        welcomeLabel.text = "Welcome, \(user.firstName)"
         // Do any additional setup after loading the view.
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        Task {
+            await delay()
+            UIView.transition(with: welcomeLabel, duration: 1, options: .curveEaseIn, animations: {
+                self.welcomeLabel.frame.origin.y -= 600}, completion: {_ in
+                    self.navigationItem.title = "Status"
+                })
+        }
+        
+    }
+    func delay() async {
+        let seconds = Double(1)
+        await Task.sleep(UInt64(seconds * Double(NSEC_PER_SEC)))
+    }
 
     /*
     // MARK: - Navigation
