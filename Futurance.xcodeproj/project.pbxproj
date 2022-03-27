@@ -24,9 +24,71 @@
 		F8AE924E27EFEDC100D9F805 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE924D27EFEDC100D9F805 /* MyTabBarController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B66AB32827F0476A00ACF7C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B66AB32327F0476A00ACF7C9 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		B66AB32A27F0476A00ACF7C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B66AB32327F0476A00ACF7C9 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
+		B66AB33127F0477000ACF7C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B66AB32C27F0477000ACF7C9 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		B66AB33327F0477000ACF7C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B66AB32C27F0477000ACF7C9 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
+		B66AB34627F04BA100ACF7C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B66AB33B27F04BA100ACF7C9 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A1C1B977ED8804E8AEEC884E7359EE58;
+			remoteInfo = Charts;
+		};
+		B66AB34827F04BA100ACF7C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B66AB33B27F04BA100ACF7C9 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7C5525C8B5EF3BB2292BB0E6DCA3B7DA;
+			remoteInfo = "Pods-Futurance";
+		};
+		B66AB34A27F04BA100ACF7C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B66AB33B27F04BA100ACF7C9 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3E7458F7D38C89A9DE4BBACD3450C88;
+			remoteInfo = SwiftAlgorithms;
+		};
+		B66AB34C27F04BA100ACF7C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B66AB33B27F04BA100ACF7C9 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 248EB203AE249596FFC55952F5590D95;
+			remoteInfo = TinyConstraints;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		31AAD21DD7646E86AC858044 /* Pods-Futurance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Futurance.debug.xcconfig"; path = "Target Support Files/Pods-Futurance/Pods-Futurance.debug.xcconfig"; sourceTree = "<group>"; };
 		6A08E71C67506EB0BD8DFFDA /* Pods_Futurance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Futurance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B66AB32327F0476A00ACF7C9 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../Charts/Charts/Charts.xcodeproj; sourceTree = "<group>"; };
+		B66AB32C27F0477000ACF7C9 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../Charts/Charts/Charts.xcodeproj; sourceTree = "<group>"; };
+		B66AB33B27F04BA100ACF7C9 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		B99CF9FD2CF79AFCC1571527 /* Pods-Futurance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Futurance.release.xcconfig"; path = "Target Support Files/Pods-Futurance/Pods-Futurance.release.xcconfig"; sourceTree = "<group>"; };
 		F80E6BBC27EFCC400027694C /* SecondaryFormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryFormTableViewController.swift; sourceTree = "<group>"; };
 		F83576D127EF73A800890586 /* Futurance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futurance.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,13 +120,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B66AB32427F0476A00ACF7C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B66AB32927F0476A00ACF7C9 /* Charts.framework */,
+				B66AB32B27F0476A00ACF7C9 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B66AB32D27F0477000ACF7C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B66AB33227F0477000ACF7C9 /* Charts.framework */,
+				B66AB33427F0477000ACF7C9 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B66AB33C27F04BA100ACF7C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B66AB34727F04BA100ACF7C9 /* Charts */,
+				B66AB34927F04BA100ACF7C9 /* Pods-Futurance */,
+				B66AB34B27F04BA100ACF7C9 /* SwiftAlgorithms */,
+				B66AB34D27F04BA100ACF7C9 /* TinyConstraints */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C4588C4EFA64729D3EDB123B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				31AAD21DD7646E86AC858044 /* Pods-Futurance.debug.xcconfig */,
 				B99CF9FD2CF79AFCC1571527 /* Pods-Futurance.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -72,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				6A08E71C67506EB0BD8DFFDA /* Pods_Futurance.framework */,
+				B66AB32327F0476A00ACF7C9 /* Charts.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -87,9 +178,11 @@
 		F83576C827EF73A800890586 = {
 			isa = PBXGroup;
 			children = (
+				B66AB33B27F04BA100ACF7C9 /* Pods.xcodeproj */,
 				F83576D327EF73A800890586 /* Futurance */,
 				F83576D227EF73A800890586 /* Products */,
 				C4588C4EFA64729D3EDB123B /* Pods */,
+				B66AB32C27F0477000ACF7C9 /* Charts.xcodeproj */,
 				DA8169328B403120F999E2FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -188,12 +281,89 @@
 			mainGroup = F83576C827EF73A800890586;
 			productRefGroup = F83576D227EF73A800890586 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B66AB32D27F0477000ACF7C9 /* Products */;
+					ProjectRef = B66AB32C27F0477000ACF7C9 /* Charts.xcodeproj */;
+				},
+				{
+					ProductGroup = B66AB32427F0476A00ACF7C9 /* Products */;
+					ProjectRef = B66AB32327F0476A00ACF7C9 /* Charts.xcodeproj */;
+				},
+				{
+					ProductGroup = B66AB33C27F04BA100ACF7C9 /* Products */;
+					ProjectRef = B66AB33B27F04BA100ACF7C9 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F83576D027EF73A800890586 /* Futurance */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B66AB32927F0476A00ACF7C9 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = B66AB32827F0476A00ACF7C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B66AB32B27F0476A00ACF7C9 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = B66AB32A27F0476A00ACF7C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B66AB33227F0477000ACF7C9 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = B66AB33127F0477000ACF7C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B66AB33427F0477000ACF7C9 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = B66AB33327F0477000ACF7C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B66AB34727F04BA100ACF7C9 /* Charts */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = Charts;
+			path = Charts.framework;
+			remoteRef = B66AB34627F04BA100ACF7C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B66AB34927F04BA100ACF7C9 /* Pods-Futurance */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = "Pods-Futurance";
+			path = Pods_Futurance.framework;
+			remoteRef = B66AB34827F04BA100ACF7C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B66AB34B27F04BA100ACF7C9 /* SwiftAlgorithms */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = SwiftAlgorithms;
+			path = Algorithms.framework;
+			remoteRef = B66AB34A27F04BA100ACF7C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B66AB34D27F04BA100ACF7C9 /* TinyConstraints */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = TinyConstraints;
+			path = TinyConstraints.framework;
+			remoteRef = B66AB34C27F04BA100ACF7C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F83576CF27EF73A800890586 /* Resources */ = {

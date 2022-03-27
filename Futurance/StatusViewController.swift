@@ -10,15 +10,11 @@ import Foundation
 import Charts
 import TinyConstraints
 
-class StatusViewController: UIViewController {
-
+class StatusViewController:
+    UIViewController, ChartViewDelegate {
+    
     var user: User!
     var savings: [User.GoalType : Float]!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     var networth:Float = 0.0
     func assets(){
         for (type,value) in savings{
@@ -49,10 +45,36 @@ class StatusViewController: UIViewController {
             let x = (data[0] * Float((1.00 + percent/100.0)))
             var point = pow(x, Float(i))
             data.append(point)
+            xy.append(ChartDataEntry(x:Double(i), y: Double(point)))
         }
     }
-    
-   
+    dataPoints()
 }
-
+    lazy var lineChartView: LineChartView = {
+        let chartView = LineChartView()
+        chartView.backgroundColor = .systemBlue
+        return chartView
+    }()
+    var xy: [ChartDataEntry] = []
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        print(entry)
+    }
+    func setData(){
+        print("Joe")
+        print(xy)
+        let set1 = LineChartDataSet(entries: xy, label: "Projected Growth")
+        let data = LineChartData(dataSet: set1)
+        lineChartView.data = data
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.addSubview(lineChartView)
+        lineChartView.centerInSuperview()
+        lineChartView.width(to: view)
+        lineChartView.heightToWidth(of: view)
+        assets()
+        projectedReturns()
+       // dataPoints()
+        setData()
+    }
 }
