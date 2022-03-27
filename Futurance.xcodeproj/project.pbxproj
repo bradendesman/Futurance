@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B631813E27EFE1B0003C9915 /* SecondaryFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631813D27EFE1B0003C9915 /* SecondaryFormTableViewController.swift */; };
 		B6C7CF1327EF92DF00EC6207 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6C7CF1227EF92DF00EC6207 /* GoogleService-Info.plist */; };
 		B6C7CF1627EF93B500EC6207 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B6C7CF1527EF93B500EC6207 /* FirebaseAnalytics */; };
 		B6C7CF1827EF93B500EC6207 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = B6C7CF1727EF93B500EC6207 /* FirebaseAnalyticsSwift-Beta */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B631813D27EFE1B0003C9915 /* SecondaryFormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryFormTableViewController.swift; sourceTree = "<group>"; };
 		B6C7CF1227EF92DF00EC6207 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F83576D127EF73A800890586 /* Futurance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futurance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F83576D427EF73A800890586 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,10 +133,10 @@
 				F83576D427EF73A800890586 /* AppDelegate.swift */,
 				F83576D627EF73A800890586 /* SceneDelegate.swift */,
 				F83576DA27EF73A800890586 /* Main.storyboard */,
-				F80E6BBC27EFCC400027694C /* SecondaryFormTableViewController.swift */,
 				F8AE924927EFDE3900D9F805 /* ContinueTableViewCell.swift */,
 				F83576EA27EF7C8C00890586 /* FormViewController.swift */,
 				F8AE924727EFD3D800D9F805 /* SecondaryTableViewCell.swift */,
+				B631813D27EFE1B0003C9915 /* SecondaryFormTableViewController.swift */,
 				F80E6BB927EFBE770027694C /* Models */,
 				F83576DD27EF73A900890586 /* Assets.xcassets */,
 				F83576DF27EF73A900890586 /* LaunchScreen.storyboard */,
@@ -251,8 +253,8 @@
 			files = (
 				F83576E927EF7A6B00890586 /* User.swift in Sources */,
 				F83576D527EF73A800890586 /* AppDelegate.swift in Sources */,
+				B631813E27EFE1B0003C9915 /* SecondaryFormTableViewController.swift in Sources */,
 				F8AE924827EFD3D800D9F805 /* SecondaryTableViewCell.swift in Sources */,
-				F80E6BBD27EFCC400027694C /* SecondaryFormTableViewController.swift in Sources */,
 				F8AE924A27EFDE3900D9F805 /* ContinueTableViewCell.swift in Sources */,
 				F83576EB27EF7C8C00890586 /* FormViewController.swift in Sources */,
 				F83576D727EF73A800890586 /* SceneDelegate.swift in Sources */,
