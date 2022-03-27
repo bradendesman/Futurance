@@ -81,16 +81,24 @@
 				F83576DA27EF73A800890586 /* Main.storyboard */,
 				F8AE924D27EFEDC100D9F805 /* MyTabBarController.swift */,
 				F8AE924B27EFEC7400D9F805 /* EducationViewController.swift */,
-				F80E6BBC27EFCC400027694C /* SecondaryFormTableViewController.swift */,
-				F8AE924927EFDE3900D9F805 /* ContinueTableViewCell.swift */,
-				F83576EA27EF7C8C00890586 /* FormViewController.swift */,
-				F8AE924727EFD3D800D9F805 /* SecondaryTableViewCell.swift */,
+				F8AE924F27EFF92200D9F805 /* Initial Form */,
 				F80E6BB927EFBE770027694C /* Models */,
 				F83576DD27EF73A900890586 /* Assets.xcassets */,
 				F83576DF27EF73A900890586 /* LaunchScreen.storyboard */,
 				F83576E227EF73A900890586 /* Info.plist */,
 			);
 			path = Futurance;
+			sourceTree = "<group>";
+		};
+		F8AE924F27EFF92200D9F805 /* Initial Form */ = {
+			isa = PBXGroup;
+			children = (
+				F83576EA27EF7C8C00890586 /* FormViewController.swift */,
+				F80E6BBC27EFCC400027694C /* SecondaryFormTableViewController.swift */,
+				F8AE924927EFDE3900D9F805 /* ContinueTableViewCell.swift */,
+				F8AE924727EFD3D800D9F805 /* SecondaryTableViewCell.swift */,
+			);
+			path = "Initial Form";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
