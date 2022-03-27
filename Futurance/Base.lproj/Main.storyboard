@@ -498,8 +498,18 @@
                     <view key="view" contentMode="scaleToFill" id="3Td-cH-j67">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ain-ml-dgD" customClass="StatusView">
+                                <rect key="frame" x="87" y="397" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="IHL-Yt-jcF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ain-ml-dgD" firstAttribute="centerX" secondItem="3Td-cH-j67" secondAttribute="centerX" id="XUJ-dK-vEp"/>
+                            <constraint firstItem="ain-ml-dgD" firstAttribute="centerY" secondItem="3Td-cH-j67" secondAttribute="centerY" id="qqF-VL-Ky2"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Status" largeTitleDisplayMode="always" id="cbR-fJ-U44"/>
                 </viewController>

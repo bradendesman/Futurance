@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import Foundation
+import Charts
+import TinyConstraints
 
 class StatusViewController: UIViewController {
 
@@ -14,18 +17,42 @@ class StatusViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    var networth:Float = 0.0
+    func assets(){
+        for (type,value) in savings{
+            if (type == User.GoalType.studentLoans){
+            networth += -1 * savings[type]!
+            }   else{
+                networth += value
+            }
+        }
     }
-    */
+    var percent = 0.00
+    func projectedReturns(){
+        switch user.riskTolerance{
+        case .high:
+            percent = 14.00
+        case .medium:
+            percent = 8.00
+        case .low:
+            percent = 4.00
+        default:
+            percent = 4.00
+        }
+        var years = 65 - user.age
+        var data: [Float] = [networth]
+        
+    func dataPoints(){
+        for i in 1...years {
+            let x = (data[0] * Float((1.00 + percent/100.0)))
+            var point = pow(x, Float(i))
+            data.append(point)
+        }
+    }
+    
+   
+}
 
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09B64623CD87C9E427DCB453 /* Pods_Futurance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A08E71C67506EB0BD8DFFDA /* Pods_Futurance.framework */; };
 		F80E6BBD27EFCC400027694C /* SecondaryFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80E6BBC27EFCC400027694C /* SecondaryFormTableViewController.swift */; };
 		F83576D527EF73A800890586 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83576D427EF73A800890586 /* AppDelegate.swift */; };
 		F83576D727EF73A800890586 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83576D627EF73A800890586 /* SceneDelegate.swift */; };
@@ -24,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31AAD21DD7646E86AC858044 /* Pods-Futurance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Futurance.debug.xcconfig"; path = "Target Support Files/Pods-Futurance/Pods-Futurance.debug.xcconfig"; sourceTree = "<group>"; };
+		6A08E71C67506EB0BD8DFFDA /* Pods_Futurance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Futurance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B99CF9FD2CF79AFCC1571527 /* Pods-Futurance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Futurance.release.xcconfig"; path = "Target Support Files/Pods-Futurance/Pods-Futurance.release.xcconfig"; sourceTree = "<group>"; };
 		F80E6BBC27EFCC400027694C /* SecondaryFormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryFormTableViewController.swift; sourceTree = "<group>"; };
 		F83576D127EF73A800890586 /* Futurance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futurance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F83576D427EF73A800890586 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,12 +51,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B64623CD87C9E427DCB453 /* Pods_Futurance.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C4588C4EFA64729D3EDB123B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31AAD21DD7646E86AC858044 /* Pods-Futurance.debug.xcconfig */,
+				B99CF9FD2CF79AFCC1571527 /* Pods-Futurance.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DA8169328B403120F999E2FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A08E71C67506EB0BD8DFFDA /* Pods_Futurance.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F80E6BB927EFBE770027694C /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +89,8 @@
 			children = (
 				F83576D327EF73A800890586 /* Futurance */,
 				F83576D227EF73A800890586 /* Products */,
+				C4588C4EFA64729D3EDB123B /* Pods */,
+				DA8169328B403120F999E2FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F83576E527EF73A900890586 /* Build configuration list for PBXNativeTarget "Futurance" */;
 			buildPhases = (
+				68B0294F986EFB9DEE8850D6 /* [CP] Check Pods Manifest.lock */,
 				F83576CD27EF73A800890586 /* Sources */,
 				F83576CE27EF73A800890586 /* Frameworks */,
 				F83576CF27EF73A800890586 /* Resources */,
+				CC128DEED18BE1A64E68DEA6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +207,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		68B0294F986EFB9DEE8850D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Futurance-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC128DEED18BE1A64E68DEA6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Futurance/Pods-Futurance-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Futurance/Pods-Futurance-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Futurance/Pods-Futurance-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F83576CD27EF73A800890586 /* Sources */ = {
@@ -338,12 +407,13 @@
 		};
 		F83576E627EF73A900890586 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31AAD21DD7646E86AC858044 /* Pods-Futurance.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GKV536JJ44;
+				DEVELOPMENT_TEAM = DTKZ4CUKF6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Futurance/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -366,12 +436,13 @@
 		};
 		F83576E727EF73A900890586 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B99CF9FD2CF79AFCC1571527 /* Pods-Futurance.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GKV536JJ44;
+				DEVELOPMENT_TEAM = DTKZ4CUKF6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Futurance/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
