@@ -13,5 +13,5 @@ struct EducationArticle {
     var author: String
     var content: String
     var image: UIImage
-    
+    var source: String
 }

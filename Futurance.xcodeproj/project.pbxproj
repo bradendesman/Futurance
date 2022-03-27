@@ -19,6 +19,10 @@
 		F85DF98E27F000860039B398 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85DF98D27F000860039B398 /* StatusViewController.swift */; };
 		F85DF99427F018F70039B398 /* EducationCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85DF99327F018F70039B398 /* EducationCollectionViewController.swift */; };
 		F85DF99627F019A00039B398 /* EducationArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85DF99527F019A00039B398 /* EducationArticle.swift */; };
+		F85DF99927F028BE0039B398 /* StatusNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85DF99827F028BE0039B398 /* StatusNavigationController.swift */; };
+		F85DF99B27F031B60039B398 /* EducationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85DF99A27F031B60039B398 /* EducationCollectionViewCell.swift */; };
+		F85DF99D27F049A80039B398 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85DF99C27F049A80039B398 /* ArticleViewController.swift */; };
+		F85DF99F27F0B2DA0039B398 /* CheckImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85DF99E27F0B2DA0039B398 /* CheckImage.swift */; };
 		F8AE924827EFD3D800D9F805 /* SecondaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE924727EFD3D800D9F805 /* SecondaryTableViewCell.swift */; };
 		F8AE924A27EFDE3900D9F805 /* ContinueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE924927EFDE3900D9F805 /* ContinueTableViewCell.swift */; };
 		F8AE924E27EFEDC100D9F805 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE924D27EFEDC100D9F805 /* MyTabBarController.swift */; };
@@ -103,6 +107,10 @@
 		F85DF98D27F000860039B398 /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		F85DF99327F018F70039B398 /* EducationCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationCollectionViewController.swift; sourceTree = "<group>"; };
 		F85DF99527F019A00039B398 /* EducationArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationArticle.swift; sourceTree = "<group>"; };
+		F85DF99827F028BE0039B398 /* StatusNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusNavigationController.swift; sourceTree = "<group>"; };
+		F85DF99A27F031B60039B398 /* EducationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationCollectionViewCell.swift; sourceTree = "<group>"; };
+		F85DF99C27F049A80039B398 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		F85DF99E27F0B2DA0039B398 /* CheckImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckImage.swift; sourceTree = "<group>"; };
 		F8AE924727EFD3D800D9F805 /* SecondaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryTableViewCell.swift; sourceTree = "<group>"; };
 		F8AE924927EFDE3900D9F805 /* ContinueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueTableViewCell.swift; sourceTree = "<group>"; };
 		F8AE924D27EFEDC100D9F805 /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
@@ -198,9 +206,12 @@
 		F83576D327EF73A800890586 /* Futurance */ = {
 			isa = PBXGroup;
 			children = (
+				F85DF99827F028BE0039B398 /* StatusNavigationController.swift */,
 				F83576D427EF73A800890586 /* AppDelegate.swift */,
 				F83576D627EF73A800890586 /* SceneDelegate.swift */,
 				F83576DA27EF73A800890586 /* Main.storyboard */,
+				F85DF99E27F0B2DA0039B398 /* CheckImage.swift */,
+				F85DF99C27F049A80039B398 /* ArticleViewController.swift */,
 				F85DF98D27F000860039B398 /* StatusViewController.swift */,
 				F8AE924D27EFEDC100D9F805 /* MyTabBarController.swift */,
 				F85DF99727F019AA0039B398 /* Education */,
@@ -218,6 +229,7 @@
 			children = (
 				F85DF99327F018F70039B398 /* EducationCollectionViewController.swift */,
 				F85DF99527F019A00039B398 /* EducationArticle.swift */,
+				F85DF99A27F031B60039B398 /* EducationCollectionViewCell.swift */,
 			);
 			path = Education;
 			sourceTree = "<group>";
@@ -426,15 +438,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				F83576E927EF7A6B00890586 /* User.swift in Sources */,
+				F85DF99F27F0B2DA0039B398 /* CheckImage.swift in Sources */,
 				F85DF99627F019A00039B398 /* EducationArticle.swift in Sources */,
 				F83576D527EF73A800890586 /* AppDelegate.swift in Sources */,
 				F8AE924E27EFEDC100D9F805 /* MyTabBarController.swift in Sources */,
 				F8AE924827EFD3D800D9F805 /* SecondaryTableViewCell.swift in Sources */,
+				F85DF99B27F031B60039B398 /* EducationCollectionViewCell.swift in Sources */,
 				F85DF98E27F000860039B398 /* StatusViewController.swift in Sources */,
 				F80E6BBD27EFCC400027694C /* SecondaryFormTableViewController.swift in Sources */,
 				F8AE924A27EFDE3900D9F805 /* ContinueTableViewCell.swift in Sources */,
+				F85DF99D27F049A80039B398 /* ArticleViewController.swift in Sources */,
 				F83576EB27EF7C8C00890586 /* FormViewController.swift in Sources */,
 				F83576D727EF73A800890586 /* SceneDelegate.swift in Sources */,
+				F85DF99927F028BE0039B398 /* StatusNavigationController.swift in Sources */,
 				F85DF99427F018F70039B398 /* EducationCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

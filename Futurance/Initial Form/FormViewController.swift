@@ -9,6 +9,7 @@ import UIKit
 
 class FormViewController: UIViewController, UITextFieldDelegate {
     
+    let defaults = UserDefaults.standard
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var subtitleLabel: UILabel!
     var pageNumber: Int = 0
@@ -54,7 +55,25 @@ class FormViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureFields()
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let archiveURL = documentsDirectory.appendingPathComponent("userData").appendingPathExtension("plist")
+        let savingsArchiveURL = documentsDirectory.appendingPathComponent("savingsData").appendingPathExtension("plist")
+        let propertyListDecoder = PropertyListDecoder()
+        guard let retrievedUserData = try? Data(contentsOf: archiveURL), let decodedUser = try? propertyListDecoder.decode(User.self, from: retrievedUserData) else {
+            configureFields()
+            defaults.set(true, forKey: "First Launch")
+            return
+        }
+        guard let retrievedSavingsData = try? Data(contentsOf: savingsArchiveURL), let decodedSavings = try? propertyListDecoder.decode([User.GoalType : Float].self, from: retrievedSavingsData) else {
+            configureFields()
+            defaults.set(true, forKey: "First Launch")
+            return}
+        
+        if defaults.bool(forKey: "First Launch") == true {
+            //this occurs after the first launch
+            defaults.set(true, forKey: "First Launch")
+            performSegue(withIdentifier: "subsequentLaunches", sender: nil)
+        }
     }
     
     
@@ -184,6 +203,22 @@ class FormViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "subsequentLaunches" {
+            let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+            let archiveURL = documentsDirectory.appendingPathComponent("userData").appendingPathExtension("plist")
+            let savingsArchiveURL = documentsDirectory.appendingPathComponent("savingsData").appendingPathExtension("plist")
+            
+            let propertyListDecoder = PropertyListDecoder()
+            guard let retrievedUserData = try? Data(contentsOf: archiveURL), let decodedUser = try? propertyListDecoder.decode(User.self, from: retrievedUserData) else {return}
+            guard let retrievedSavingsData = try? Data(contentsOf: savingsArchiveURL), let decodedSavings = try? propertyListDecoder.decode([User.GoalType : Float].self, from: retrievedSavingsData) else {return}
+            
+            let tabBar = segue.destination as! MyTabBarController
+            let nav = tabBar.viewControllers![0] as! UINavigationController
+            let destination = nav.viewControllers.first! as! StatusViewController
+            destination.user = decodedUser
+            destination.savings = decodedSavings
+            
+        }
         guard segue.identifier == "completeForm" else {return}
         let destination = segue.destination as! SecondaryFormTableViewController
         destination.user = self.user
