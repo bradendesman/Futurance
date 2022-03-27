@@ -40,7 +40,7 @@ class SecondaryFormTableViewController: UITableViewController, SecondaryCellDele
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section <= goals!.count {
+        if indexPath.section < goals!.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "goalCell", for: indexPath) as! SecondaryTableViewCell
             guard let goals = goals else {
                 return cell
