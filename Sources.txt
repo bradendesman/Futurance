@@ -19,3 +19,10 @@ https://www.investor.gov/introduction-investing/investing-basics/what-risk
 https://www.investor.gov/introduction-investing/investing-basics/what-risk
 ######
 https://www.investopedia.com/terms/r/risk.asp
+
+
+### Other Sources
+https://cloud.google.com/identity-platform/docs/ios/apple
+https://www.youtube.com/watch?v=jH87nNe8qaY&ab_channel=GoogleCloudTech
+https://www.zerotoappstore.com/how-to-hide-keyboard-in-swift-return-key.html
+https://stackoverflow.com/questions/27517632/how-to-create-a-delay-in-swift
