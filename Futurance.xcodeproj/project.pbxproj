@@ -17,6 +17,8 @@
 		F83576EB27EF7C8C00890586 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83576EA27EF7C8C00890586 /* FormViewController.swift */; };
 		F8AE924827EFD3D800D9F805 /* SecondaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE924727EFD3D800D9F805 /* SecondaryTableViewCell.swift */; };
 		F8AE924A27EFDE3900D9F805 /* ContinueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE924927EFDE3900D9F805 /* ContinueTableViewCell.swift */; };
+		F8AE924C27EFEC7400D9F805 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE924B27EFEC7400D9F805 /* EducationViewController.swift */; };
+		F8AE924E27EFEDC100D9F805 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE924D27EFEDC100D9F805 /* MyTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		F83576EA27EF7C8C00890586 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		F8AE924727EFD3D800D9F805 /* SecondaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryTableViewCell.swift; sourceTree = "<group>"; };
 		F8AE924927EFDE3900D9F805 /* ContinueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueTableViewCell.swift; sourceTree = "<group>"; };
+		F8AE924B27EFEC7400D9F805 /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
+		F8AE924D27EFEDC100D9F805 /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				F83576D427EF73A800890586 /* AppDelegate.swift */,
 				F83576D627EF73A800890586 /* SceneDelegate.swift */,
 				F83576DA27EF73A800890586 /* Main.storyboard */,
+				F8AE924D27EFEDC100D9F805 /* MyTabBarController.swift */,
+				F8AE924B27EFEC7400D9F805 /* EducationViewController.swift */,
 				F80E6BBC27EFCC400027694C /* SecondaryFormTableViewController.swift */,
 				F8AE924927EFDE3900D9F805 /* ContinueTableViewCell.swift */,
 				F83576EA27EF7C8C00890586 /* FormViewController.swift */,
@@ -160,7 +166,9 @@
 			files = (
 				F83576E927EF7A6B00890586 /* User.swift in Sources */,
 				F83576D527EF73A800890586 /* AppDelegate.swift in Sources */,
+				F8AE924E27EFEDC100D9F805 /* MyTabBarController.swift in Sources */,
 				F8AE924827EFD3D800D9F805 /* SecondaryTableViewCell.swift in Sources */,
+				F8AE924C27EFEC7400D9F805 /* EducationViewController.swift in Sources */,
 				F80E6BBD27EFCC400027694C /* SecondaryFormTableViewController.swift in Sources */,
 				F8AE924A27EFDE3900D9F805 /* ContinueTableViewCell.swift in Sources */,
 				F83576EB27EF7C8C00890586 /* FormViewController.swift in Sources */,

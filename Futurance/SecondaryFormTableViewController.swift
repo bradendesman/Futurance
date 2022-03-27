@@ -7,21 +7,35 @@
 
 import UIKit
 
-class SecondaryFormTableViewController: UITableViewController, SecondaryCellDelegate, UITextFieldDelegate {
+class SecondaryFormTableViewController: UITableViewController, SecondaryCellDelegate, UITextFieldDelegate, ContinueCellDelegate {
+    
+    func continueButtonPressed() {
+        print("continued")
+        performSegue(withIdentifier: "exitForms", sender: nil)
+    }
+    
     
     func store(_ type: User.GoalType, savingsValue: Float) {
         savings[type] = savingsValue
-        print(savings[type])
+        let continueCell = tableView(tableView, cellForRowAt: IndexPath(row: 0, section: goals!.count)) as! ContinueTableViewCell
+        print("stored")
+        if savings.count == goals.count {
+            print("here")
+            continueCell.continueButton.isEnabled = true
+            tableView.reloadRows(at: [IndexPath(row: 0, section: goals.count)], with: .fade)
+        }
     }
     
-    var user: User? = nil
-    var goals: [User.GoalType]? = nil
+    var user: User!
+    var goals: [User.GoalType]!
     var savings: [User.GoalType : Float] = [:]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let user = user else {return}
+        let continueCell = tableView(tableView, cellForRowAt: IndexPath(row: 0, section: goals!.count)) as! ContinueTableViewCell
+        continueCell.continueButton.isEnabled = false
     }
 
     // MARK: - Table view data source
@@ -59,7 +73,11 @@ class SecondaryFormTableViewController: UITableViewController, SecondaryCellDele
             
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "continueCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "continueCell", for: indexPath) as! ContinueTableViewCell
+            cell.delegate = self
+            if goals.count == savings.count {
+                cell.continueButton.isEnabled = true
+            }
             return cell
         }
         
